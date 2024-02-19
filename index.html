@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Static Page</title>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: url('wind-back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    opacity: 0.95;
+}
+
+.company-title {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 1rem 2rem;
+    margin-bottom: 10px;
+    align-items: center;
+    color: #333; 
+}
+
+.separator {
+    margin-top:20px;
+    border-top: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.left-section, .right-section {
+    margin-left: auto;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+.left-section p {
+    margin: 20px 0 0 20px;
+    color: #555; 
+}
+
+.right-section p {
+    margin: 20px 0 0 20px; 
+    color: #555; 
+}
+
+.left-section strong{
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    color: #333; 
+} 
+.right-section strong {
+    display: block;
+    margin-top: 1rem;
+    color: #333; 
+}
+
+.img-carousel {
+    padding: 3rem 10rem 3rem 10rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    justify-content: space-between; 
+}
+
+.card-img {
+    width: 30rem;
+    height: 20rem;
+    padding: 0rem;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-section ul {
+    margin-top: 10px;
+}
+
+.right-section ul li {
+    margin: 10px 0; 
+    color: #555; 
+}
+
+@media (min-width: 900px) {
+    .left-section, .right-section {
+        margin-left: auto;
+        display: inline-block;
+        padding-left: 5rem;
+        width: 40%;
+        vertical-align: top;
+    }
+
+    .company-title {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    body {
+        overflow: hidden;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+    
+    .container {
+        margin: 3rem 9rem 3rem 9rem;
+        padding: 3rem;
+        min-height: 80vh;
+        background-color: #fff;
+        border-radius: 30px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        border-radius: 30px; 
+        margin-top: 6rem;
+        padding-top: 2rem;
+        min-height: 70vh;
+        opacity: .85;
+    }
+
+    .left-section p {
+        padding-bottom: 0.5rem;
+    }
+
+    .right-section p {
+        padding-bottom: 0.5rem;
+    }
+
+    .company-title {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .left-section {
+        padding-left: 1rem;
+    }
+    
+    #second-separator {
+        margin-top:3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .img-carousel {
+        display: none;
+    }
+
+    .card-img {
+        display: none;
+    }
+
+    .carousel-img {
+        display: none;
+    }
+        
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="company-title">WIND ENERGY GROUP SA</div>
+        <div class="separator"></div>
+        <div class="left-section">
+            <p><strong>ID Number:</strong> <br> CHE-202.503.833 </p>
+            <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
+            <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
+            <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">wind.energy.group.sa@gmail.com</a></p>
+        </div>
+        <div class="right-section">
+            <p><strong>Main Activity:</strong> <br> Holding activity</p>
+        
+            <p><strong>Description:</strong> <br> Owns wind parks located in Germany</p>
+        
+            <ul>
+              <li>WINDPARK KRATZENBURG GmbH</li>
+              <li>WINDPARK SPREMBERG GmbH</li>
+              <li>W2E WINDPARK UG</li>
+          </ul>
+        </div>
+        <div class="separator" id="second-separator"></div>
+        <div class="img-carousel">
+            <div class="card-img">
+                <img class="carousel-img" src="wind1.jpg">
+            </div>
+            <div class="card-img">
+                <img class="carousel-img" src="wind2.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

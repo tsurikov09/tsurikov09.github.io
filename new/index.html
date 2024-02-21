@@ -31,14 +31,74 @@
             margin-bottom: 20px;
         }
         .banner-area__img {
-            padding: 50px 0 87px 0;
+            padding: 50px 0 20px 0;
+        }
+        .header-top {
+            padding-top: 10px;
+            text-align: right;
+            background-image: url('header.svg');
+            background-size: cover; /* or contain depending on how you want it to fit */
+            background-repeat: no-repeat;
+            height: 50px;
+        }
+        .email-element {
+            display: flex;
+            justify-content: flex-end; /* Align items to the start and end of the container */
+            align-items: center;
+        }
+
+        .features {
+            padding:0rem;
+        }
+
+        .features-active {
+            display: flex; /* Use flexbox */
+            justify-content: space-between; /* Distribute items evenly */
+        }
+
+        .product-item {
+            flex: 1; /* Each item takes equal space */
+            margin: 0 5px; /* Optional margin between items */
         }
     </style>
 </head>
 
 <body>
 
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 email-element">
+                        <div class="header-top-wrapper">
+                            <div class="header-top-info">
+                                <div class="email">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.95" height="13.4"
+                                            viewBox="0 0 16.95 13.4">
+                                            <g id="Mail" transform="translate(0.975 0.7)">
+                                                <path id="Path_1" data-name="Path 1"
+                                                    d="M3.5,4h12A1.5,1.5,0,0,1,17,5.5v9A1.5,1.5,0,0,1,15.5,16H3.5A1.5,1.5,0,0,1,2,14.5v-9A1.5,1.5,0,0,1,3.5,4Z"
+                                                    transform="translate(-2 -4)" fill="none" stroke="#1a2224"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" />
+                                                <path id="Path_2" data-name="Path 2" d="M17,6,9.5,11.25,2,6"
+                                                    transform="translate(-2 -4.5)" fill="none" stroke="#1a2224"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>kme.invest.finance.limited@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <main>
+        
         <!--Banner Area Start -->
         <section class="banner-area">
             <div class="container main-container-area">
@@ -68,6 +128,39 @@
                         <div class="banner-area__img">
                         
                             <img src="wind3.jpg" alt="banner-img" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+                <div class="features-wrapper">
+                    <div class="features-active">
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <a href="product-details.html"><img src="wind-back.jpg" alt="Product Name"
+                                        class="img-fluid"></a>
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <a href="product-details.html"> <img src="wind1.jpg" alt="Product Name"
+                                        class="img-fluid"></a>
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <a href="product-details.html"><img src="wind2.jpg" alt="Product Name"
+                                        class="img-fluid"></a>
+    
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

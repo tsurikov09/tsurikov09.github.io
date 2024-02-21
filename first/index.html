@@ -92,6 +92,31 @@ body {
     margin: 10px 0; 
     color: #555; 
 }
+footer {
+    background-color: #20231e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .contact-info {
+    float: left;
+}
+
+footer .copyright {
+    float: right;
+    margin-right: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    footer .contact-info, footer .copyright {
+        float: none;
+        display: block;
+    }
+}
 
 @media (min-width: 900px) {
     .left-section, .right-section {
@@ -109,7 +134,7 @@ body {
     }
     
     .container {
-        margin: 3% 10% 3% 10%;
+        margin: 3% 10% 5% 10%;
         padding: 2%;
         background-color: #fff;
         border-radius: 30px; 
@@ -198,5 +223,9 @@ body {
             </div>
         </div>
     </div>
+    <footer>
+        <div class="contact-info">Email: wind.energy.group.sa@gmail.com</div>
+        <div class="copyright">&copy; 2024, WIND ENERGY GROUP SA</div>
+    </footer>
 </body>
 </html>

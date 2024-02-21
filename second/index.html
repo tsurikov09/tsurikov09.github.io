@@ -26,7 +26,7 @@ body {
     margin: 1rem 2rem 1rem 2rem;
     margin-bottom: 1rem;
     align-items: center;
-    color: #333; 
+    color: #000000; 
 }
 
 .separator {
@@ -43,25 +43,25 @@ body {
 }
 
 .left-section p {
-    margin: 1rem 0 0 1rem;
-    color: #555; 
+    margin: 1rem 0 0 0rem;
+    color: #000000; 
 }
 
 .right-section p {
-    margin: 1rem 0 0 1rem; 
-    color: #555; 
+    margin: 1rem 0 0 0rem; 
+    color: #000000; 
 }
 
 .left-section strong{
     display: block;
     margin-bottom: 0px;
     margin-top: 1rem;
-    color: #333; 
+    color: #000000; 
 } 
 .right-section strong {
     display: block;
     margin-top: 1rem;
-    color: #333; 
+    color: #000000; 
 }
 
 .img-carousel {
@@ -75,7 +75,7 @@ body {
 .card-img {
     width: 40%;
     height: 30%;
-    padding: 0rem;
+    padding: 0.5rem;
 }
 
 .carousel-img {
@@ -85,12 +85,38 @@ body {
 }
 
 .right-section ul {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .right-section ul li {
     margin: 10px 0; 
-    color: #555; 
+    color: #000000; 
+}
+
+footer {
+    background-color: #20231e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .contact-info {
+    float: left;
+}
+
+footer .copyright {
+    float: right;
+    margin-right: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    footer .contact-info, footer .copyright {
+        float: none;
+        display: block;
+    }
 }
 
 @media (min-width: 900px) {
@@ -109,7 +135,7 @@ body {
     }
     
     .container {
-        margin: 3% 10% 3% 10%;
+        margin: 3% 10% 5% 10%;
         padding: 2%;
         background-color: #fff;
         border-radius: 30px; 
@@ -165,31 +191,97 @@ body {
     }
         
 }
+@media (min-width: 1024px) {
+    .section-container {
+        padding-bottom: 1rem;
+    }
+    .cols {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+    }
+    .helpcenter {
+        margin-left:3rem;
+        background: var(--global-green-10);
+        border-radius: 4px;
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        flex-grow: 1;
+    }
+    .helpcenter__header {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        
+    }
+    .pages__h3 {
+        margin-left: 0rem;
+        font-size: 1.25rem;
+    }
+
+    .helpcenter p {
+        max-width: 350px;
+    }
+
+    .left-section {
+        .helpcenter {
+            margin-left:0rem;
+            background: var(--global-green-10);
+            border-radius: 4px;
+            padding-left: 0rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+        .helpcenter__header {
+            margin-left: 0rem;
+        }
+    }
+
+    svg:not(:root) {
+        overflow-clip-margin: content-box;
+        overflow: hidden;
+    }
+
+}
+
+
 </style>
 </head>
 <body>
     <div class="container">
         <div class="company-title">КМЕ INVEST FINANCE LIMITED</div>
         <div class="separator"></div>
-        <div class="left-section">
-            <p><strong>ID Number:</strong> <br> HE275980 </p>
-            <p><strong>Address:</strong> <br> Kyriakou Matsi, 16, EAGLE HOUSE, 6 th floor, Agioi Omologites, 1082, Nicosia, Cyprus</p>
-            <p><strong>Contacts:</strong> <br> Director – THEMIS DIRECTORS LIMITED <br> Representative of the company – Ulyashchenko Lyudmyla </p>
-            <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">kme.invest.finance.limited@gmail.com</a></p>
-        </div>
-        <div class="right-section">
-            <p><strong>Main Activity:</strong> <br> Investment activity</p>
-        
-            <p><strong>Description:</strong> <br> Search and attraction of loans for investment in projects in the field of wind energy, industry and agriculture.
-                <br> Companies in which investments were made</p>
-        
-            <ul>
-              <li>"FUHRLAENDER WINDTECHNOLOGY" LLC (Ukraine)</li>
-              <li>PJSC "KRAMATORSK HEAVY DUTY MACHINE TOOL BUILDING PLANT" (Ukraine)</li>
-              <li>"WIND PARK PRICHEROMORSKIY" LLC (Ukraine)</li>
-              <li>"ATOMWIND-KRAMATORSK" LLC (Ukraine)</li>
-              <li>"WIND PARK OCHAKOVSKIY" PJS (Ukraine)</li>
-          </ul>
+        <div class="section-container">
+            <div class="left-section">
+                <p><strong class="pages__h3 helpcenter__header">ID Number:</strong> <br> HE275980 </p>
+                <p><strong class="pages__h3 helpcenter__header">Address:</strong> <br> Kyriakou Matsi, 16, EAGLE HOUSE, 6 th floor, Agioi Omologites, 1082, Nicosia, Cyprus</p>
+                <p><strong class="pages__h3 helpcenter__header">Contacts:</strong> <br> Director – THEMIS DIRECTORS LIMITED <br> Representative of the company – Ulyashchenko Lyudmyla </p>
+                <p><strong class="pages__h3 helpcenter__header">Email:</strong> <br> <a id="link" onclick="myFunction()">kme.invest.finance.limited@gmail.com</a></p>
+            </div>
+            <div class="right-section">
+                <p><strong class="pages__h3 helpcenter__header">Main Activity:</strong> <br> Investment activity</p>
+            
+                <p><strong class="pages__h3 helpcenter__header">Description:</strong> <br> Search and attraction of loans for investment in projects in the field of wind energy, industry and agriculture.
+                    <br> Companies in which investments were made</p>
+            
+                <ul>
+                  <li>"FUHRLAENDER WINDTECHNOLOGY" LLC (Ukraine)</li>
+                  <li>PJSC "KRAMATORSK HEAVY DUTY MACHINE TOOL BUILDING PLANT" (Ukraine)</li>
+                  <li>"WIND PARK PRICHEROMORSKIY" LLC (Ukraine)</li>
+                  <li>"ATOMWIND-KRAMATORSK" LLC (Ukraine)</li>
+                  <li>"WIND PARK OCHAKOVSKIY" PJS (Ukraine)</li>
+              </ul>
+            </div>
+            
         </div>
         <div class="separator" id="second-separator"></div>
         <div class="img-carousel">
@@ -199,7 +291,14 @@ body {
             <div class="card-img">
                 <img class="carousel-img" src="wind2.jpg">
             </div>
+            <div class="card-img">
+                <img class="carousel-img" src="wind3.jpg">
+            </div>
         </div>
     </div>
+    <footer>
+        <div class="contact-info">Contact: kme.invest.finance.limited@gmail.com</div>
+        <div class="copyright">&copy; 2024, КМЕ INVEST FINANCE LIMITED</div>
+    </footer>
 </body>
 </html>

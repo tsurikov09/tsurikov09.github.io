@@ -109,11 +109,19 @@ footer {
 }
 
 @media (min-width: 900px) {
-    .left-section, .right-section {
+    .lr-sections {
+        justify-content: space-between;
+    }
+    .left-section {
         margin-left: auto;
         display: inline-block;
-        padding-left: 5rem;
-        width: 40%;
+        padding-left: 7rem;
+        vertical-align: top;
+    } 
+    .right-section {
+        margin-left: auto;
+        display: inline-block;
+        padding-left: 9rem;
         vertical-align: top;
     }
 
@@ -186,23 +194,26 @@ footer {
     <div class="body-container">
         <div class="company-title">WIND ENERGY GROUP SA</div>
         <div class="separator"></div>
-        <div class="left-section">
-            <p><strong>ID Number:</strong> <br> CHE-202.503.833 </p>
-            <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
-            <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
-            <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">wind.energy.group.sa@gmail.com</a></p>
+        <div class="lr-sections">
+            <div class="left-section">
+                <p><strong>ID Number:</strong> <br> CHE-202.503.833 </p>
+                <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
+                <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
+                <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">wind.energy.group.sa@gmail.com</a></p>
+            </div>
+            <div class="right-section">
+                <p><strong>Main Activity:</strong> <br> Holding activity</p>
+            
+                <p><strong>Description:</strong> <br> Owns wind parks located in Germany</p>
+            
+                <ul>
+                  <li>WINDPARK KRATZENBURG GmbH</li>
+                  <li>WINDPARK SPREMBERG GmbH</li>
+                  <li>W2E WINDPARK UG</li>
+              </ul>
+            </div>
         </div>
-        <div class="right-section">
-            <p><strong>Main Activity:</strong> <br> Holding activity</p>
         
-            <p><strong>Description:</strong> <br> Owns wind parks located in Germany</p>
-        
-            <ul>
-              <li>WINDPARK KRATZENBURG GmbH</li>
-              <li>WINDPARK SPREMBERG GmbH</li>
-              <li>W2E WINDPARK UG</li>
-          </ul>
-        </div>
         <div class="separator" id="second-separator"></div>
         <div class="img-carousel">
             <div class="card-img">

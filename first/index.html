@@ -10,7 +10,6 @@
 body {
     padding:0;
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     background: url('wind-back.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -27,7 +26,7 @@ body {
     margin: 1rem 2rem 1rem 2rem;
     margin-bottom: 1rem;
     align-items: center;
-    color: #333; 
+    color: #000000; 
 }
 
 footer {
@@ -49,13 +48,18 @@ footer {
 }
 
 .left-section p {
-    margin: 1rem 0 0 0.5rem;
-    color: #555; 
+    margin: 0rem 0 0 0rem;
+    color: #000000; 
+}
+
+.left-section strong {
+    margin: 0rem 0 0 0rem;
+    color: #000000; 
 }
 
 .right-section p {
     margin: 1rem 0 0 1rem; 
-    color: #555; 
+    color: #000000; 
 }
 
 .left-section strong{
@@ -78,6 +82,10 @@ footer {
     justify-content: space-between; 
 }
 
+.id-text {
+    margin-top:0.6rem;
+}
+
 .card-img {
     width: 40%;
     height: 30%;
@@ -93,12 +101,28 @@ footer {
 .right-section ul {
     margin-left: 2.5rem;
     margin-top: 10px;
+    color: #000000; 
+}
+
+.description-text ul {
+    list-style-type: disc;
+}
+
+.description-text ul li {
+    margin-top: 0.5rem;
+    margin-left:2rem;
+    list-style-type: disc;
 }
 
 .right-section ul li {
     list-style-type: disc;
     margin: 10px 0; 
     color: #555; 
+}
+.first-text {
+    margin-left:0rem;
+    display: flex;
+    vertical-align: top;
 }
 
 @media only screen and (max-width: 600px) {
@@ -196,21 +220,25 @@ footer {
         <div class="separator"></div>
         <div class="lr-sections">
             <div class="left-section">
-                <p><strong>ID Number:</strong> <br> CHE-202.503.833 </p>
+                <div class="first-text">
+                    <p><br>Holding activity</p>
+                </div>
+                <div class="description-text">
+                    <p><br> Owns wind parks located in Germany<br></p>
+                    <ul>
+                        <li>WINDPARK KRATZENBURG GmbH</li>
+                        <li>WINDPARK SPREMBERG GmbH</li>
+                        <li>W2E WINDPARK UG</li>
+                    </ul>
+                </div>
+                <div class="id-text">
+                    <p><strong><br>ID Number:</strong> <br> CHE-202.503.833 </p>
+                </div>
+            </div>
+            <div class="right-section">
                 <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
                 <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
                 <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">wind.energy.group.sa@gmail.com</a></p>
-            </div>
-            <div class="right-section">
-                <p><strong>Main Activity:</strong> <br> Holding activity</p>
-            
-                <p><strong>Description:</strong> <br> Owns wind parks located in Germany</p>
-            
-                <ul>
-                  <li>WINDPARK KRATZENBURG GmbH</li>
-                  <li>WINDPARK SPREMBERG GmbH</li>
-                  <li>W2E WINDPARK UG</li>
-                </ul>
             </div>
         </div>
         

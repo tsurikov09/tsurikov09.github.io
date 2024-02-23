@@ -7,6 +7,10 @@
     <title>КМЕ INVEST FINANCE LIMITED</title>
     <link rel="stylesheet" href="main.css">
     <style>
+        .banner-area__content ul {
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
         .wide-image {
             width: 100%;
             display: block;
@@ -35,19 +39,20 @@
             margin-bottom: 20px;
         }
         .banner-area__img {
-            padding: 50px 0 20px 0;
+            min-width: 600px;
+            padding: 50px 0 100px 0;
         }
         .header-top {
             padding-top: 10px;
             text-align: right;
             background-image: url('header.svg');
-            background-size: cover; /* or contain depending on how you want it to fit */
+            background-size: cover; 
             background-repeat: no-repeat;
             height: 50px;
         }
         .custom-header {
             display: flex;
-            justify-content: flex-end; /* Align items to the start and end of the container */
+            justify-content: flex-end; 
             align-items: center;
             color: #1A2224;
         }
@@ -61,14 +66,24 @@
         }
 
         .features-active {
-            display: flex; /* Use flexbox */
-            justify-content: space-between; /* Distribute items evenly */
+            display: flex; 
+            justify-content: space-between; 
         }
 
         .product-item {
-            flex: 1; /* Each item takes equal space */
-            margin: 0 5px; /* Optional margin between items */
+            flex: 1; 
+            margin: 0 5px; 
         }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+    
+        }
+        .divider {
+            margin-bottom: 1.5rem;
+        }
+    
     </style>
 </head>
 
@@ -79,7 +94,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 custom-header">
-                    
                         <div class="header-top-wrapper">
                             <div class="header-top-info">
                                 <div class="email">
@@ -112,18 +126,12 @@
         <!--Banner Area Start -->
         <section class="banner-area">
             <div class="container main-container-area">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-2 order-lg-1">
+                <div class="row align-items-center main-content">
+                    <div class="col-lg-6 order-1 order-lg-1">
                         <div class="banner-area__content">
                             <h2>КМЕ INVEST FINANCE LIMITED</h2>
-                            <p><strong class="helpcenter__header">ID Number:</strong> <br> HE275980 </p>
-                            <p><strong class="helpcenter__header">Address:</strong> <br> Kyriakou Matsi, 16, EAGLE HOUSE, 6 th floor, Agioi Omologites, 1082, Nicosia, Cyprus</p>
-                            <p><strong class="helpcenter__header">Contacts:</strong> <br> Director – THEMIS DIRECTORS LIMITED <br> Representative of the company – Ulyashchenko Lyudmyla </p>
-                            <p><strong class="helpcenter__header">Email:</strong> <br> <a id="link" onclick="myFunction()">kme.invest.finance.limited@gmail.com</a></p>
-                            <p><strong class="helpcenter__header">Main Activity:</strong> <br> Investment activity</p>
-            
-                            <p class="p-description"><strong class="helpcenter__header">Description:</strong> <br> Search and attraction of loans for investment in projects in the field of wind energy, industry and agriculture.
-                                <br> Companies in which investments were made:</p>
+                            <p class="p-description"><br> Search and attraction of loans for investment in projects in the field of wind energy, industry and agriculture.
+                                <br><br> Companies in which investments were made:</p>
                         
                             <ul>
                                 <li>"FUHRLAENDER WINDTECHNOLOGY" LLC (Ukraine)</li>
@@ -132,9 +140,18 @@
                                 <li>"ATOMWIND-KRAMATORSK" LLC (Ukraine)</li>
                                 <li>"WIND PARK OCHAKOVSKIY" PJS (Ukraine)</li>
                             </ul>
+                            <h3 class="divider">General information</h3>
+                            <p><strong class="helpcenter__header">Main Activity:</strong> <br> Investment activity</p>
+                            <p><strong class="helpcenter__header">ID Number:</strong> <br> HE275980 </p>
+                            <p><strong class="helpcenter__header">Address:</strong> <br> Kyriakou Matsi, 16, EAGLE HOUSE, 6 th floor, Agioi Omologites, 1082, Nicosia, Cyprus</p>
+                            <p><strong class="helpcenter__header">Contacts:</strong> <br> Director – THEMIS DIRECTORS LIMITED <br> Representative of the company – Ulyashchenko Lyudmyla </p>
+                            <p><strong class="helpcenter__header">Email:</strong> <br> <a id="link" onclick="myFunction()">kme.invest.finance.limited@gmail.com</a></p>
+                            
+            
+                            
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="col-lg-6 order-2 order-lg-2">
                         <div class="banner-area__img">
                         
                             <img src="main.jpg" alt="banner-img" class="img-fluid">

@@ -104,10 +104,6 @@ footer {
     color: #000000; 
 }
 
-.description-text ul {
-    list-style-type: disc;
-}
-
 .description-text ul li {
     margin-top: 0.5rem;
     margin-left:2rem;
@@ -123,13 +119,6 @@ footer {
     margin-left:0rem;
     display: flex;
     vertical-align: top;
-}
-
-@media only screen and (max-width: 600px) {
-    footer .contact-info, footer .copyright {
-        float: none;
-        display: block;
-    }
 }
 
 @media (min-width: 900px) {
@@ -165,17 +154,81 @@ footer {
 
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+
+    .left-section, .right-section {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .description-text ul li {
+        margin-top: 0.5rem;
+        margin-left:2rem;
+    }
+
+    .right-section {
+        padding-left:0;
+    }
+
+    footer .copyright {
+        padding-top: 0px;
+    }
+
+    .row {
+        margin:0;
+    }
+
+    .copyright {
+        padding-top:0rem;
+    }
+
+    footer {
+        left:0;
+        right:0;
+        margin-top:20px;
+        width: 100%;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+    }
+
     body {
         padding: 0.5rem;
     }
 
     .body-container {
         border-radius: 30px; 
-        margin-top: 6rem;
+        margin-top: 2rem;
         padding-top: 2rem;
         min-height: 70vh;
         opacity: .85;
+    }
+
+    .left-section div {
+        display: flex;
+        align-items: center;
+        width: auto;
+        flex-direction: column;
+    }
+
+    .left-section p {
+        margin:auto;
+    }
+
+    .right-section p {
+        margin:auto;
+    }
+
+    .right-section div {
+        margin-top:0.5rem
+    }
+    
+    .email {
+        margin-bottom: 1rem;
     }
 
     .left-section p {
@@ -189,10 +242,6 @@ footer {
     .company-title {
         text-align: center;
         padding-bottom: 1rem;
-    }
-
-    .left-section {
-        padding-left: 1rem;
     }
     
     #second-separator {
@@ -236,9 +285,15 @@ footer {
                 </div>
             </div>
             <div class="right-section">
-                <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
-                <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
-                <p><strong>Email:</strong> <br> <a id="link" onclick="myFunction()">wind.energy.group.sa@gmail.com</a></p>
+                <div class="address">
+                    <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
+                </div>
+                <div class="contacts">
+                    <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
+                </div>
+                <div class="email">
+                    <p><strong>Email:</strong> <br> wind.energy.group.sa@gmail.com</p>
+                </div>
             </div>
         </div>
         
@@ -256,7 +311,7 @@ footer {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="copyright d-flex justify-content-between align-items-center">
+                    <div class="copyright d-flex justify-content-between align-items-center footer-text">
                         <div class="copyright-text order-2 order-lg-1">
                             <p>&copy; 2024. WIND ENERGY GROUP SA </p>
                         </div>

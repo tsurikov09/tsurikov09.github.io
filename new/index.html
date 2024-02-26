@@ -27,12 +27,19 @@
         }
 
         @media (max-width: 600px) {
-            footer {
+            .banner-area__img {
                 display: none;
             }
 
-            .header-top {
-                display: none;
+            footer .copyright {
+                padding-top: 8px;
+                justify-content: center;
+            }
+
+            .custom-header {
+                min-width: 95vw;
+                display:flex;
+                justify-content: end;
             }
         }
         @media (min-width: 1000px) {
@@ -98,8 +105,8 @@
     <header class="header">
         <div class="header-top">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 custom-header">
+                <div class="row custom-header">
+                    
                         <div class="header-top-wrapper">
                             <div class="header-top-info">
                                 <div class="email">
@@ -123,7 +130,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -1,363 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="main.css">
-<title>Static Page</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КМЕ INVEST FINANCE LIMITED</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
 
-body {
-    padding:0;
-    margin:0;
-    font-size: 1rem;
-    background: url('wind-back.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
+        body {
+            background-image: url('bg-gradient.svg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
 
-.body-container {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    opacity: 0.95;
-}
+        .fancy-hr {
+            border: 0;
+            height: 5px;
+            background-image: linear-gradient(to right, #f8cc94, #f4d494);
+            margin: 10px 0;
+        }
+        .extra-hr {
+            border: 0;
+            height: 5px;
+            background-image: linear-gradient(to right, #3a5d1f, #3a5d1f);
+            margin: 10px 0;
+        }
+        .banner-area__content ul {
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+        .wide-image {
+            width: 100%;
+            display: block;
+        }
 
-.company-title {
-    font-size: 1.5rem;
-    margin: 1rem 2rem 1rem 2rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    color: #000000; 
-}
+        .half-image {
+            width: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0.5rem;
+        }
+        .banner-area__content p {
+            color: #1A2224;
+        }
 
-footer {
-    padding: 70px 0px 30px 0px;
-    background-color: #1A2224;
-}
+        @media (max-width: 600px) {
 
-.separator {
-    margin-top:1rem;
-    border-top: 0.1rem solid #333;
-    margin-bottom: 1rem;
-}
+            .fancy-hr {
+                border: 0;
+                height: 5px;
+                background-image: linear-gradient(to right, #3c6c94, #aecce4);
+                margin: 10px 0;
+            }
+            .extra-hr {
+                border: 0;
+                height: 5px;
+                background-image: linear-gradient(to right, #3c6c94, #aecce4);
+                margin: 10px 0;
+            }
 
-.left-section, .right-section {
-    margin-left: auto;
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-}
+            .header-top-info .email {
+                padding-right:0;
+            }
 
-.left-section p {
-    margin: 0rem 0 0 0rem;
-    color: #000000; 
-}
+            .banner-area__img {
+                display: none;
+            }
 
-.left-section strong {
-    margin: 0rem 0 0 0rem;
-    color: #000000; 
-}
+            footer .copyright {
+                padding-top: 8px;
+                justify-content: center;
+            }
 
-.right-section p {
-    margin: 1rem 0 0 1rem; 
-    color: #000000; 
-}
+            .custom-header {
+                min-width: 95vw;
+                display:flex;
+                justify-content: end;
+            }
+        }
+        @media (min-width: 1000px) {
+            .banner-area__img {
+                min-width: 400px;
+                padding: 50px 0 100px 0;
+            }
+        }
 
-.left-section strong{
-    display: block;
-    margin-bottom: 0px;
-    margin-top: 0rem;
-    color: #333; 
-} 
-.right-section strong {
-    display: block;
-    margin-top: 0rem;
-    color: #333; 
-}
+        .main-container-area {
+            margin-bottom: 20px;
+        }
+        .banner-area__img {
+            padding: 50px 0 50px 0;
+        }
+        .header-top {
+            padding-top: 10px;
+            text-align: right;
+            background-image: url('header.svg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            height: 50px;
+        }
+        .custom-header {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            color: #1A2224;
+        }
 
-.img-carousel {
-    padding: 1rem 7rem 1rem 7rem;
-    display: flex;
-    align-items: center;
-    opacity: 0.9;
-    justify-content: space-between; 
-}
+        .features {
+            padding:0rem;
+        }
 
-.id-text {
-    margin-top:0.6rem;
-}
+        .header-top {
+            padding-right: 12rem;
+        }
 
-.card-img {
-    width: 40%;
-    height: 30%;
-    padding: 0rem;
-}
+        .features-active {
+            display: flex; 
+            justify-content: space-between; 
+        }
 
-.carousel-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .product-item {
+            flex: 1; 
+            margin: 0 5px; 
+        }
 
-.right-section ul {
-    margin-left: 2.5rem;
-    margin-top: 10px;
-    color: #000000; 
-}
-
-.description-text ul li {
-    margin-top: 0.5rem;
-    margin-left:2rem;
-    list-style-type: disc;
-}
-
-.right-section ul li {
-    list-style-type: disc;
-    margin: 10px 0; 
-    color: #555; 
-}
-.first-text {
-    margin-left:0rem;
-    display: flex;
-    vertical-align: top;
-}
-
-@media (min-width: 900px) {
-    .features {
-        display: none;
-    }
-    .lr-sections {
-        justify-content: space-between;
-    }
-    .left-section {
-        margin-left: auto;
-        display: inline-block;
-        padding-left: 7rem;
-        vertical-align: top;
-    } 
-    .right-section {
-        margin-left: auto;
-        display: inline-block;
-        padding-left: 9rem;
-        vertical-align: top;
-    }
-
-    .company-title {
-        text-align: center;
-        font-size: 2rem;
-        padding-bottom: 1rem;
-    }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
     
-    .body-container {
-        margin: 3% 10% 5% 10%;
-        padding: 2%;
-        background-color: #fff;
-        border-radius: 30px; 
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .description-text ul li {
-        margin-top: 0.5rem;
-        margin-left:0rem;
-        list-style-type:none;
-    }
-
-    footer {
-        padding: 10px 0 10px 0;
-    }
-
-    .features {
-        padding: 0;
-    }
-
-    .product-item {
-        padding:0.5rem;
-    }
-
-    .features-active {
-        display: flex;
-    }
-
-    footer .container {
-        padding:0;
-    }
-
-    .left-section, .right-section {
-        margin-left: 0;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .right-section {
-        padding-left:0.5rem;
-        padding-right:0.5rem;
-    }
-
-    .left-section {
-        padding-left:0;
-    }
-
-    footer .copyright {
-        padding-top: 0px;
-    }
-
-    .row {
-        margin:0;
-    }
-
-    .copyright {
-        padding-top:0rem;
-    }
-
-    .body-container {
-        margin:0 0.5rem 2rem 0.5rem;
-        border-radius: 30px; 
-        margin-top: 2rem;
-        padding-top: 2rem;
-        min-height: 100vh;
-        opacity: .85;
-    }
-
-    .left-section div {
-        display: flex;
-        align-items: center;
-        width: auto;
-        flex-direction: column;
-    }
-
-    .left-section p {
-        margin:auto;
-    }
-
-    .right-section p {
-        margin:auto;
-    }
-
-    .right-section div {
-        margin-top:0.5rem
-    }
+        }
+        .divider {
+            margin-bottom: 1.5rem;
+        }
     
-    .email {
-        margin-bottom: 1rem;
-    }
-
-    .left-section p {
-        padding-bottom: 0.5rem;
-    }
-
-    .right-section p {
-        padding-bottom: 0.5rem;
-    }
-
-    .company-title {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    
-    #second-separator {
-        display: none;
-    }
-    
-    .img-carousel {
-        display: none;
-    }
-
-    .card-img {
-        display: none;
-    }
-
-    .carousel-img {
-        display: none;
-    }
-        
-}
-</style>
+    </style>
 </head>
+
 <body>
-    <main>
-        <div class="body-container">
-            <div class="company-title">WIND ENERGY GROUP SA</div>
-            <div class="separator"></div>
-            <div class="lr-sections">
-                <div class="left-section">
-                    <div class="first-text">
-                        <p><br><strong>Holding activity</strong></p>
-                    </div>
-                    <div class="description-text">
-                        <p><br> Owns wind parks located in Germany<br></p>
-                        <ul>
-                            <li>WINDPARK KRATZENBURG GmbH</li>
-                            <li>WINDPARK SPREMBERG GmbH</li>
-                            <li>W2E WINDPARK UG</li>
-                        </ul>
-                    </div>
-                    <div class="id-text">
-                        <p><strong><br>ID Number:</strong> <br> CHE-202.503.833 </p>
-                    </div>
-                </div>
-                <div class="right-section">
-                    <div class="address">
-                        <p><strong>Address:</strong> <br> Via Serafino Balestra, 18, P.O. Box 6012, 6901 Lugano, Switzerland</p>
-                    </div>
-                    <div class="contacts">
-                        <p><strong>Contacts:</strong> <br> President of the Board of Directors – Ulyashchenko Lyudmyla</p>
-                    </div>
-                    <div class="email">
-                        <p><strong>Email:</strong> <br> wind.energy.group.sa@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="separator" id="second-separator"></div>
-            <div class="img-carousel">
-                <div class="card-img">
-                    <img class="carousel-img img-fluid" src="wind1.jpg">
-                </div>
-                <div class="card-img">
-                    <img class="carousel-img img-fluid" src="wind2.jpg">
-                </div>
-            </div>
-            <section class="features">
-                <div class="container">
-                    <div class="row mobile-row">
-                        <div class="features-wrapper">
-                            <div class="features-active">
-                                <div class="product-item">
-                                    <div class="product-item-image">
-                                        <img src="wind1.jpg" alt="Product Name"
-                                                class="img-fluid mobile-img">
+
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row custom-header">
+                    
+                        <div class="header-top-wrapper">
+                            <div class="header-top-info">
+                                <div class="email">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.95" height="13.4"
+                                            viewBox="0 0 16.95 13.4">
+                                            <g id="Mail" transform="translate(0.975 0.7)">
+                                                <path id="Path_1" data-name="Path 1"
+                                                    d="M3.5,4h12A1.5,1.5,0,0,1,17,5.5v9A1.5,1.5,0,0,1,15.5,16H3.5A1.5,1.5,0,0,1,2,14.5v-9A1.5,1.5,0,0,1,3.5,4Z"
+                                                    transform="translate(-2 -4)" fill="none" stroke="#1a2224"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" />
+                                                <path id="Path_2" data-name="Path 2" d="M17,6,9.5,11.25,2,6"
+                                                    transform="translate(-2 -4.5)" fill="none" stroke="#1a2224"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" />
+                                            </g>
+                                        </svg>
                                     </div>
-                                </div>
-                                <div class="product-item">
-                                    <div class="product-item-image">
-                                        <img src="wind2.jpg" alt="Product Name"
-                                                class="img-fluid mobile-img">
+                                    <div class="text">
+                                        <span>kme.invest.finance.limited@gmail.com</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     
                 </div>
-            </section>
+            </div>
         </div>
-    </main>
+    <main>
+        
+        <!--Banner Area Start -->
+        <section class="banner-area">
+            <div class="container main-container-area">
+                <div class="row align-items-center main-content">
+                    <div class="col-lg-6 order-1 order-lg-1">
+                        <div class="banner-area__content">
+                            <h3>КМЕ INVEST FINANCE LIMITED</h3>
+                            <hr class="fancy-hr">
+                            <div class="description-paragraph">
+                                <p class="p-description"><br> Search and attraction of loans for investment in projects in the field of wind energy, industry and agriculture.
+                                    <br><br> Companies in which investments were made:</p>
+                            
+                                <ul>
+                                    <li>"FUHRLAENDER WINDTECHNOLOGY" LLC (Ukraine)</li>
+                                    <li>PJSC "KRAMATORSK HEAVY DUTY MACHINE TOOL BUILDING PLANT" (Ukraine)</li>
+                                    <li>"WIND PARK PRICHERNOMORSKIY" LLC (Ukraine)</li>
+                                    <li>"ATOMWIND-KRAMATORSK" LLC (Ukraine)</li>
+                                    <li>"WIND PARK OCHAKOVSKIY" PJS (Ukraine)</li>
+                                </ul>
+                            </div>
+                            <hr class="extra-hr">
+                            <h3 class="divider">General information</h3>
+                            <p><strong class="helpcenter__header">Main Activity:</strong> <br> Investment activity</p>
+                            <p><strong class="helpcenter__header">ID Number:</strong> <br> HE275980 </p>
+                            <p><strong class="helpcenter__header">Address:</strong> <br> Kyriakou Matsi, 16, EAGLE HOUSE, 6 th floor, Agioi Omologites, 1082, Nicosia, Cyprus</p>
+                            <p><strong class="helpcenter__header">Email:</strong> <br> kme.invest.finance.limited@gmail.com</p>
+                            <hr class="extra-hr">
+            
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-2">
+                        <div class="banner-area__img">
+                        
+                            <img src="main.jpg" alt="banner-img" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+                <div class="features-wrapper">
+                    <div class="features-active">
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="wind3.jpg" alt="Product Name"
+                                        class="img-fluid">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="wind1.jpg" alt="Product Name"
+                                        class="img-fluid">
+                            </div>
+                            
+                        </div>
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <img src="wind2.jpg" alt="Product Name"
+                                        class="img-fluid">
     
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Banner Area End -->
+    </main>
+
+    <!-- Footer -->
     <footer style="padding-top:10px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="copyright d-flex justify-content-between align-items-center footer-text">
+                    <div class="copyright d-flex justify-content-between align-items-center">
                         <div class="copyright-text order-2 order-lg-1">
-                            <p>&copy; 2024. WIND ENERGY GROUP SA </p>
+                            <p>&copy; 2024. КМЕ INVEST FINANCE LIMITED </p>
                         </div>
                         <div class="copyright-text order-2 order-lg-1">
-                            <p>Contact: wind.energy.group.sa@gmail.com </p>
+                            <p>Contact: kme.invest.finance.limited@gmail.com </p>
                         </div>
                     </div>
                     
@@ -365,5 +267,6 @@ footer {
             </div>
         </div>
     </footer>
+    <!-- Footer -->
+
 </body>
-</html>
